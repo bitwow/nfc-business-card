@@ -200,12 +200,34 @@ h2 {
   display: block;
 }
 
+.organization__title-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.55rem;
+  align-items: center;
+}
+
 .organization strong {
-  margin-bottom: 0.25rem;
   font-size: 0.98rem;
 }
 
+.organization__badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.35rem;
+  padding: 0.12rem 0.48rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-size: 0.62rem;
+  font-weight: 850;
+  letter-spacing: 0.035em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
 .organization small {
+  margin-top: 0.28rem;
   color: var(--muted);
   font-size: 0.78rem;
   line-height: 1.35;

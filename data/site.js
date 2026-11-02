@@ -65,6 +65,13 @@ export const siteConfig = {
     },
     github: null
   },
+  featuredProject: {
+    name: "QuickAlert",
+    url: "https://quickalert.ru/",
+    description: "Экосистема для помощи лицам с ОВЗ",
+    badge: "Основной проект",
+    mark: "QA"
+  },
   publicUrl: "",
   seo: {
     title: "Дмитрий Васильев — iOS-разработчик и преподаватель ИТМО",

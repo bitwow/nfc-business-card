@@ -28,14 +28,19 @@ function currentPublicUrl() {
 }
 
 function renderPerson() {
-  const { person } = siteConfig;
+  const { person, featuredProject } = siteConfig;
   document.querySelector("#headline").textContent = person.headline;
   document.querySelector("#bio").textContent = person.shortBio;
-  document.querySelector("#organization-name").textContent = person.organization;
-  document.querySelector("#organization-role").textContent = person.organizationRole;
+  document.querySelector("#organization-name").textContent = featuredProject.name;
+  document.querySelector("#organization-role").textContent = featuredProject.description;
+  document.querySelector("#organization-badge").textContent = featuredProject.badge;
+  document.querySelector("#organization-mark").textContent = featuredProject.mark;
   const organization = document.querySelector("#organization");
-  organization.href = person.organizationUrl;
-  organization.setAttribute("aria-label", `${person.organization}: ${person.organizationRole} (откроется в новой вкладке)`);
+  organization.href = featuredProject.url;
+  organization.setAttribute(
+    "aria-label",
+    `${featuredProject.name}: ${featuredProject.description}. ${featuredProject.badge} (откроется в новой вкладке)`
+  );
   const portrait = document.querySelector("#portrait");
   portrait.src = person.photo;
   portrait.alt = "";
