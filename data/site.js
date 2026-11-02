@@ -11,7 +11,7 @@ export const siteConfig = {
     organizationUrl: "https://itmo.ru/",
     organizationRole: "Преподаватель и со-руководитель образовательных программ",
     location: "Санкт-Петербург, Россия",
-    photo: "assets/dmitry-vasilyev.jpg",
+    photo: "assets/dmitry-vasilyev.webp",
     photoAlt: "Дмитрий Васильев"
   },
   contacts: {

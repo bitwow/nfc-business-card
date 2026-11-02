@@ -3,6 +3,7 @@ dist/
 .DS_Store
 nfc-business-card-*.tgz
 фото.png
+photo_new.png
 android/.gradle/
 android/local.properties
 android/**/build/
