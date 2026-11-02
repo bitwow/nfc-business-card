@@ -4,6 +4,7 @@ dist/
 nfc-business-card-*.tgz
 фото.png
 photo_new.png
+icon.png
 android/.gradle/
 android/local.properties
 android/**/build/

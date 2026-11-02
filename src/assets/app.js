@@ -34,7 +34,7 @@ function renderPerson() {
   document.querySelector("#organization-name").textContent = featuredProject.name;
   document.querySelector("#organization-role").textContent = featuredProject.description;
   document.querySelector("#organization-badge").textContent = featuredProject.badge;
-  document.querySelector("#organization-mark").textContent = featuredProject.mark;
+  document.querySelector("#organization-icon").src = featuredProject.icon;
   const organization = document.querySelector("#organization");
   organization.href = featuredProject.url;
   organization.setAttribute(

@@ -70,7 +70,7 @@ export const siteConfig = {
     url: "https://quickalert.ru/",
     description: "Экосистема для помощи лицам с ОВЗ",
     badge: "Основной проект",
-    mark: "QA"
+    icon: "assets/quickalert-icon.webp"
   },
   publicUrl: "",
   seo: {
