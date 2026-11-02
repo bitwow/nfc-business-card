@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.DS_Store
+nfc-business-card-*.tgz
+фото.png
+android/.gradle/
+android/local.properties
+android/**/build/
+

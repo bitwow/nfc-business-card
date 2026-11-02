@@ -1,0 +1,17 @@
+{
+  "name": "Дмитрий Васильев — цифровая визитка",
+  "short_name": "Дмитрий Васильев",
+  "description": "Контакты Дмитрия Васильева",
+  "lang": "ru",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#111315",
+  "theme_color": "#111315",
+  "icons": [
+    {
+      "src": "assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
