@@ -70,7 +70,6 @@ export const siteConfig = {
     title: "Дмитрий Васильев — iOS-разработчик и преподаватель ИТМО",
     description:
       "Контакты Дмитрия Васильева — iOS-разработчика, преподавателя ИТМО и специалиста по цифровой доступности.",
-    themeColorDark: "#111315",
-    themeColorLight: "#f4f1ea"
+    themeColorDark: "#111315"
   }
 };

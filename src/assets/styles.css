@@ -18,20 +18,6 @@
   text-rendering: optimizeLegibility;
 }
 
-:root[data-theme="light"] {
-  color-scheme: light;
-  --bg: #f4f1ea;
-  --surface: #fffdf8;
-  --surface-raised: #e9e5dc;
-  --text: #171a1c;
-  --muted: #5d605f;
-  --line: #cbc8c0;
-  --accent: #597600;
-  --accent-text: #fff;
-  --warm: #ad613b;
-  --shadow: 0 24px 70px rgb(44 38 25 / 14%);
-}
-
 * {
   box-sizing: border-box;
 }
@@ -89,68 +75,10 @@ svg {
   outline-offset: 4px;
 }
 
-.site-header,
 main,
 footer {
   width: min(calc(100% - 2rem), var(--max-width));
   margin-inline: auto;
-}
-
-.site-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 5.5rem;
-  padding-block: env(safe-area-inset-top) 0;
-}
-
-.wordmark,
-.icon-button {
-  display: inline-grid;
-  width: 2.75rem;
-  height: 2.75rem;
-  place-items: center;
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  color: var(--text);
-  text-decoration: none;
-}
-
-.wordmark {
-  border-color: transparent;
-  background: var(--text);
-  color: var(--bg);
-  font-size: 0.78rem;
-  font-weight: 900;
-  letter-spacing: -0.04em;
-}
-
-.icon-button {
-  position: relative;
-  cursor: pointer;
-}
-
-.theme-icon {
-  position: absolute;
-  width: 1.2rem;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.8;
-  transition: opacity 180ms ease, transform 180ms ease;
-}
-
-.theme-icon--moon,
-:root[data-theme="light"] .theme-icon--sun {
-  opacity: 0;
-  transform: scale(0.6) rotate(-20deg);
-}
-
-:root[data-theme="light"] .theme-icon--moon {
-  opacity: 1;
-  transform: none;
 }
 
 .hero {
@@ -190,6 +118,10 @@ footer {
   letter-spacing: 0.13em;
   line-height: 1.5;
   text-transform: uppercase;
+}
+
+.intro-eyebrow {
+  text-align: center;
 }
 
 h1,
@@ -524,7 +456,6 @@ footer p {
 }
 
 @media (min-width: 44rem) {
-  .site-header,
   main,
   footer {
     width: min(calc(100% - 4rem), var(--max-width));
@@ -533,8 +464,8 @@ footer p {
   .hero {
     grid-template-columns: minmax(12rem, 0.55fr) minmax(22rem, 1.45fr);
     gap: clamp(3rem, 7vw, 6rem);
-    min-height: calc(100vh - 5.5rem);
-    min-height: calc(100svh - 5.5rem);
+    min-height: 100vh;
+    min-height: 100svh;
     align-items: center;
   }
 

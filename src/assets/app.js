@@ -85,21 +85,21 @@ function createVCard() {
   const lines = [
     "BEGIN:VCARD",
     "VERSION:3.0",
-    `N:${escapeVCard(person.lastName)};${escapeVCard(person.firstName)};;;`,
-    `FN:${escapeVCard(person.displayName)}`,
-    `ORG:${escapeVCard(person.organization)}`,
-    `TITLE:${escapeVCard(person.headline)}`,
-    `NOTE:${escapeVCard(person.shortBio)}`,
-    contacts.phone?.url ? `TEL;TYPE=CELL:${contacts.phone.url.replace(/^tel:/, "")}` : "",
-    ...emails.map((item, index) => `EMAIL;TYPE=${index === 0 ? "WORK" : "INTERNET"}:${escapeVCard(item.value)}`),
-    `URL:${escapeVCard(currentPublicUrl())}`,
+    "PRODID:-//BitWow//NFC Business Card//RU",
+    `N;CHARSET=UTF-8:${escapeVCard(person.lastName)};${escapeVCard(person.firstName)};;;`,
+    `FN;CHARSET=UTF-8:${escapeVCard(person.displayName)}`,
+    `ORG;CHARSET=UTF-8:${escapeVCard(person.organization)}`,
+    `TITLE;CHARSET=UTF-8:${escapeVCard(person.headline)}`,
+    `NOTE;CHARSET=UTF-8:${escapeVCard(person.shortBio)}`,
+    contacts.phone?.url ? `TEL;TYPE=CELL;TYPE=VOICE:${contacts.phone.url.replace(/^tel:/, "")}` : "",
+    ...emails.map((item, index) => `EMAIL;TYPE=${index === 0 ? "WORK" : "INTERNET"};TYPE=INTERNET:${escapeVCard(item.value)}`),
+    `URL;TYPE=HOME:${escapeVCard(currentPublicUrl())}`,
     contacts.telegram?.url ? `X-SOCIALPROFILE;TYPE=telegram:${contacts.telegram.url}` : "",
     contacts.instagram?.url ? `X-SOCIALPROFILE;TYPE=instagram:${contacts.instagram.url}` : "",
-    `ADR;TYPE=WORK:;;;;;;${escapeVCard(person.location)}`,
     "END:VCARD"
   ].filter(Boolean);
 
-  return `\ufeff${lines.join("\r\n")}\r\n`;
+  return `${lines.join("\r\n")}\r\n`;
 }
 
 function downloadVCard() {
@@ -160,30 +160,8 @@ function renderQrCode() {
   }
 }
 
-function setupTheme() {
-  const root = document.documentElement;
-  const button = document.querySelector("#theme-toggle");
-  const saved = localStorage.getItem("theme");
-  const initial = saved === "light" || saved === "dark"
-    ? saved
-    : "dark";
-
-  const apply = (theme) => {
-    root.dataset.theme = theme;
-    button.setAttribute("aria-label", theme === "dark" ? "Включить светлую тему" : "Включить тёмную тему");
-  };
-
-  apply(initial);
-  button.addEventListener("click", () => {
-    const next = root.dataset.theme === "dark" ? "light" : "dark";
-    localStorage.setItem("theme", next);
-    apply(next);
-  });
-}
-
 renderPerson();
 renderContacts();
-setupTheme();
 renderQrCode();
 document.querySelector("#save-contact").addEventListener("click", downloadVCard);
 document.querySelector("#copy-link").addEventListener("click", copyLink);

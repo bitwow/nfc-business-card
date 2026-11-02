@@ -30,7 +30,6 @@ async function build() {
     "{{FIRST_NAME}}": siteConfig.person.firstName,
     "{{LAST_NAME}}": siteConfig.person.lastName,
     "{{THEME_DARK}}": siteConfig.seo.themeColorDark,
-    "{{THEME_LIGHT}}": siteConfig.seo.themeColorLight,
     "{{PUBLIC_URL}}": publicUrl,
     "{{OG_IMAGE_URL}}": new URL("assets/og-card.jpg", publicUrl).href
   };
