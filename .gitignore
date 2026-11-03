@@ -1,5 +1,7 @@
 node_modules/
 dist/
+tmp/
+output/
 .DS_Store
 nfc-business-card-*.tgz
 фото.png

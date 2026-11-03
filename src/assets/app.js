@@ -29,7 +29,7 @@ function currentPublicUrl() {
 }
 
 function renderPerson() {
-  const { person, featuredProject } = siteConfig;
+  const { person, featuredProject, cv } = siteConfig;
   document.querySelector("#headline").textContent = person.headline;
   document.querySelector("#bio").textContent = person.shortBio;
   document.querySelector("#organization-name").textContent = featuredProject.name;
@@ -45,6 +45,15 @@ function renderPerson() {
   const portrait = document.querySelector("#portrait");
   portrait.src = person.photo;
   portrait.alt = "";
+  const cvLink = document.querySelector("#download-cv");
+  if (cv?.url) {
+    cvLink.href = cv.url;
+    cvLink.download = cv.fileName || "Dmitry-Vasilyev-CV.pdf";
+    cvLink.querySelector("span").textContent = cv.label || "Скачать CV";
+    document.querySelector("#resume-description").textContent = cv.description || "";
+  } else {
+    document.querySelector(".resume-section").hidden = true;
+  }
   document.querySelector("#year").textContent = new Date().getFullYear();
 }
 

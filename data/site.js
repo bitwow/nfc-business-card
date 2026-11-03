@@ -78,6 +78,12 @@ export const siteConfig = {
     badge: "Основной проект",
     icon: "assets/quickalert-icon.webp"
   },
+  cv: {
+    url: "assets/dmitry-vasilyev-cv-2026.pdf",
+    fileName: "Dmitry-Vasilyev-CV-2026.pdf",
+    label: "Скачать CV",
+    description: "Опыт, проекты, публикации и образование в одном PDF."
+  },
   publicUrl: "",
   seo: {
     title: "Дмитрий Васильев — iOS-разработчик и преподаватель ИТМО",

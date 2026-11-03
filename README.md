@@ -21,6 +21,10 @@ npm run serve
 npm run check
 ```
 
+## Обновление CV
+
+Публичный PDF находится в `src/assets/dmitry-vasilyev-cv-2026.pdf`. Замените этот файл, сохранив имя, либо измените поля `cv.url` и `cv.fileName` в `data/site.js`. После замены снова запустите `npm run check`.
+
 ## Публикация
 
 Workflow `.github/workflows/pages.yml` собирает `dist` с корректным URL проектного сайта и публикует его в GitHub Pages. В настройках репозитория Pages должен использовать источник **GitHub Actions**.
