@@ -8,6 +8,8 @@ nfc-business-card-*.tgz
 photo_new.png
 icon.png
 android/.gradle/
+android/.kotlin/
 android/local.properties
 android/**/build/
+tmp-apk-check/
 
