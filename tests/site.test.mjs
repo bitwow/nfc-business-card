@@ -36,5 +36,5 @@ test("CV download is present and uses the edited PDF", async () => {
   const html = await readFile(path.join(dist, "index.html"), "utf8");
   assert.match(html, /id="download-cv"/);
   assert.match(html, /download="Dmitry-Vasilyev-CV-2026\.pdf"/);
-  await access(path.join(dist, siteConfig.cv.url));
+  await access(path.join(dist, siteConfig.cv.url.split("?")[0]));
 });

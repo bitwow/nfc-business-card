@@ -79,7 +79,7 @@ export const siteConfig = {
     icon: "assets/quickalert-icon.webp"
   },
   cv: {
-    url: "assets/dmitry-vasilyev-cv-2026.pdf",
+    url: "assets/dmitry-vasilyev-cv-2026.pdf?v=ca62f71",
     fileName: "Dmitry-Vasilyev-CV-2026.pdf",
     label: "Скачать CV",
     description: "Опыт, проекты, публикации и образование в одном PDF."
