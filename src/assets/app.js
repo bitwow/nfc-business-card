@@ -173,6 +173,12 @@ function renderQrCode() {
   if (svg) {
     svg.setAttribute("aria-hidden", "true");
     svg.setAttribute("focusable", "false");
+    svg.setAttribute("shape-rendering", "crispEdges");
+    svg.querySelector("rect")?.setAttribute("fill", "#ffffff");
+    svg.querySelectorAll("path").forEach((path) => {
+      path.setAttribute("fill", "#000000");
+      path.setAttribute("stroke", "transparent");
+    });
   }
 }
 
