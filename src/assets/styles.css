@@ -348,6 +348,15 @@ h2 {
   background: transparent;
 }
 
+.contact-card--social .contact-card__icon {
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  color: var(--accent);
+}
+
+.contact-card--social:hover .contact-card__icon {
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
 .contact-card__icon svg,
 .contact-card__arrow {
   width: 1.35rem;

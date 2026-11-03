@@ -33,6 +33,12 @@ export const siteConfig = {
       value: "@bitwow_tech",
       url: "https://www.youtube.com/@bitwow_tech"
     },
+    rutube: {
+      label: "RUTUBE",
+      hint: "Видеоканал",
+      value: "Видеоканал",
+      url: "https://rutube.ru/channel/11761426/"
+    },
     instagram: {
       label: "Instagram",
       hint: "Личный профиль",
